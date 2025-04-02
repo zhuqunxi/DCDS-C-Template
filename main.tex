@@ -1,0 +1,290 @@
+\documentclass{main}
+\usepackage{amsmath}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\eps}[1]{{#1}_{\varepsilon}}
+
+
+
+
+\title{The full title of your article}
+
+
+\author[a,b,1]{Author One}
+\author[c,1,2]{Author Two}
+\author[a,2]{Author Three}
+
+\affil[a]{Affiliation One}
+\affil[b]{Affiliation Two}
+\affil[c]{Affiliation Three}
+
+\begin{document}
+\newgeometry{includeall, marginparwidth = .32\linewidth, marginparsep = 2em, margin = 1in, bottom = 1.25in}
+
+\maketitle
+
+\marginpar{
+\vskip -1.1in
+  \begin{mdframed}
+    \small \RaggedRight
+    \textbf{Received: xxxx 20xx}\\ 
+    \textbf{Accepted: xxxx 20xx}\\
+    Published online: xxxx 20xx
+  \end{mdframed}
+}
+
+\marginpar{
+  \begin{mdframed}[style = dcdscsigstyle]
+    \small \RaggedRight
+    \section*{\textcolor{dcdscbluetext}{Significance}}
+    \lipsum[2]
+  \end{mdframed}
+}
+
+\marginparb{
+    \scriptsize
+    \textbf{Author contributions}: \\
+    \textbf{Competing interests}:\\
+    \textsuperscript{1}Co-first authors\\
+    \textsuperscript{2}Corresponding author
+}
+
+
+\begin{abstract}
+  This is the abstract of your article. It should not exceed 200 words and
+  needs to be concise and factual. State the purpose of the research, the
+  principal results, and conclusion.
+\end{abstract}
+\keywords{complex systems, machine learning, ...}
+\lipsum[1-3]
+
+\section{Introduction}
+Use this AIMS template to prepare your tex file after your article is accepted by an AIMS journal. Read all information including that which is proceeded by a \% sign. These are important instructions and explanations. Thank you for your cooperation.
+
+
+
+\section{Examples}
+\subsection{A sample Theorem}
+\newgeometry{margin = 1in, bottom = 1.25in}
+\twocolumn
+
+\begin{theorem} \label{result1}
+Content of your theorem.
+\end{theorem}
+
+\begin{proof}
+To refer to equations in your article, use the commands:
+\eqref{Quotient}, \eqref{Eqn2} and \eqref{Eqn4}.
+\end{proof}
+
+\subsection{A sample Lemma}
+\begin{lemma} \label{L: Lyapunov exponents}
+Content of your lemma.
+\end{lemma}
+
+\begin{proof}
+Your proof statements.
+\end{proof}
+
+\subsection{A sample Remark}
+\begin{remark}
+Content of your remark.
+\end{remark}
+
+\subsection{A sample Definition}
+\begin{definition} Sample: Let $\phi_{t}$ be an Anosmia flow on a
+        compact space $V$ and $A \subset V$ a dense set. Say
+        that the upper Lacunae exponents are
+        \emph{$\frac{1}{2}$-pinched} on $A$ if
+\begin{strip}
+  \begin{equation}\label{Quotient}
+    \sup_{x \in A} \frac{\max \{ |\bar{\lambda}|: \bar{\lambda} \ 
+    \text{is a nonzero upper Lyapunov exponent at} \ x \}}
+    {\min \{ |\bar{\lambda}|: \bar{\lambda} \ \text{is a
+    nonzero upper Lyapunov exponent at} \ x\}}
+     \leq 2.
+\end{equation}
+\end{strip}
+\end{definition}
+
+\subsection{A sample Proposition}
+\begin{proposition}
+Content of your proposition.
+\end{proposition}
+
+\subsection{A sample Corollary}
+\begin{corollary}
+Content of your corollary.
+\end{corollary}
+
+\subsection{A sample Assumption}
+\begin{assumption}
+Content of your assumption.
+\end{assumption}
+
+\subsection{Example of inserting a Figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=.35\linewidth]{AIMS_Logo.pdf}
+\end{figure}
+
+\section{How to align the math formulas}
+\begin{theorem} \label{result2}
+  Content of your theorem.
+\end{theorem}
+
+In the proof below, we will to show you how to align the math formulas:
+\begin{proof}[Proof of Theorem \ref{result2}]
+Please refer to the following example to align your math formulas:
+% Make sure all equations fit within the margins and all equation numbers are continuous.
+
+\begin{equation}\label{Eqn2}
+  \begin{split}
+    \theta_\varepsilon  \wedge d\theta_\varepsilon ^{n-1}
+    & = (\theta_0 + \varepsilon \alpha) \wedge (d(\theta_0 + \varepsilon \alpha))^{n-1}
+       \\
+    & = (\theta_0 + \varepsilon \alpha) \wedge (d\theta_0)^{n-1} + \theta_0 \wedge d\theta_0^{n-1}
+   \\
+    &\quad - \varepsilon d(\alpha \wedge \theta_0 \wedge d\theta_0^{n-2}) \\
+    & \quad  + \theta_0 \wedge d\theta_0^{n-1} + \varepsilon \alpha \wedge d\theta_0^{n-1}  \\
+    & = \theta_0 \wedge d\theta_0^{n-1}
+      - \varepsilon d(\alpha \wedge \theta_0 \wedge d\theta_0^{n-2}),
+  \end{split}
+\end{equation}
+
+
+It can also be aligned in the following way:
+
+\begin{equation}\label{Eqn3}
+  \begin{split}
+    & \theta_\varepsilon  \wedge d\theta_\varepsilon ^{n-1} \\
+    & = (\theta_0 + \varepsilon \alpha) \wedge (d(\theta_0 + \varepsilon \alpha))^{n-1}
+      \quad \text{since } d\alpha = 0 \\
+    & = (\theta_0 + \varepsilon \alpha) \wedge (d\theta_0)^{n-1} + \theta_0 \wedge d\theta_0^{n-1}
+     \\
+    &\quad - - \varepsilon d(\alpha \wedge \theta_0 \wedge d\theta_0^{n-2}) \\
+    & \quad + \theta_0 \wedge d\theta_0^{n-1} + \varepsilon \alpha \wedge d\theta_0^{n-1} \\
+    & = \theta_0 \wedge d\theta_0^{n-1}
+      - \varepsilon d(\alpha \wedge \theta_0 \wedge d\theta_0^{n-2}),
+  \end{split}
+\end{equation}
+
+
+Here is another example for if the math expression in [ ] must be split to a new line:
+
+  \begin{equation}\label{Eqn4}
+    \begin{split}
+      &\int_0^T |u_0(t)|^2dt
+       \leq \delta^{-1} \left[\int_0^T (\beta(t)+\gamma(t)) dt \right.\\
+      & \left.+ T^{\frac{2(p-1)}{p}}
+        \left(\int_0^T |\dot{u}_0(t)|^p dt\right)^{\frac{2}{p}}
+        + T^{\frac{2(p-1)}{p}}
+        \left(\int_0^T |\dot{u}_0(t)|^p dt\right)^{\frac{2}{p}}\right].
+    \end{split}
+  \end{equation}
+
+
+Please use displaystyle if your formulas fully occupy a paragraph and use textstyle for formulas among text.
+
+For two equations:
+\begin{align*}
+  A & = \theta_0 \wedge d\theta_0^{n-1}
+      - \varepsilon d(\alpha \wedge \theta_0 \wedge d\theta_0^{n-2}) \\
+  B & =\theta_1 \wedge d\theta_1^{n-1}
+      - \varepsilon d(\alpha \wedge \theta_1 \wedge d\theta_1^{n-2})
+\end{align*}
+\end{proof}
+
+\section*{Acknowledgments}
+We would like to thank you for \textbf{following
+the instructions above} very closely. It will save us lot of time and expedite the
+process of your article's publication.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          7. REFERENCES SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%       READ THIS SECTION CAREFULLY
+
+% Each of the references below MUST be cited in your article above. Do not include references that are not cited in your article.
+
+% Follow the examples below carefully. We strongly suggest that you copy and paste your reference information directly into our examples.
+
+% List all references in alphabetical order according to the first author's last name.
+
+% Verify each URL works correctly and can be accessed properly. Your URL links should be to reputable websites. The command line for a website link begins with: \url{ }
+
+% Do not add MR or DOI numbers to your references. AIMS production staff will add this information.
+
+% Using BibTex is not recommended but can be handled.
+
+\begin{thebibliography}{99}
+
+% Work in Progress Example:
+\bibitem{1}
+\newblock F. Abergel and R. Tachet,
+\newblock
+\newblock work in progress.
+
+% Accepted to a Journal Example:
+\bibitem{2}
+\newblock S. Arora, M. T. Mohan and J. Dabas,
+\newblock Approximate controllability of the non-autonomous impulsive evolution equation with state-dependent delay in Banach space,
+\newblock to appear, \emph{Nonlinear Anal. Hybrid System}.
+
+% Chapter or Article in a Book with a Volume Example:
+\bibitem{3}
+\newblock S. Ball,
+\newblock Polynomials in finite geometries,
+\newblock \emph{Surveys in Combinatorics, 1999 (Canterbury)}, London Math. Soc. Lecture Note Ser., 267, Cambridge University Press, Cambridge, 1999, 17-35.
+
+% Journal Article Example:
+\bibitem{4}
+\newblock Y. Benoist, P. Foulon and F. Labourie,
+\newblock \textsf{Flots d'Anosov a distributions stable et instable differentiables},
+\newblock \emph{J. Amer. Math. Soc.}, \textbf{5} (1992), 33-74.
+
+% Proceedings from a Conference Example:
+\bibitem{5}
+\newblock T. Pang and A. Hussain,
+\newblock \textsf{An application of functional Ito's formula to stochastic portfolio optimization with bounded memory},
+\newblock \emph{Proceedings of the SIAM Conference on Control and Its Applications}, Paris, France, 2015, 159-166.
+
+% No Author Example / URL Link Example:
+\bibitem{6}
+%\newblock
+\newblock \emph{SARS Expert Committee, SARS in Hong Kong: From Experience to Action}, Report of Hong Kong SARS Expert Committee,
+\newblock 2003. Available from: \url{http://www.sars-expertcom.gov.hk/english/reports/reports.html}.
+
+% Chapter or Article in a Academic Press Example:
+\bibitem{7}
+\newblock J. Serrin,
+\newblock Gradient estimates for solutions of nonlinear elliptic and parabolic equations,
+\newblock in \emph{Contributions to Nonlinear Functional Analysis}, Academic Press, 1971, 33-75.
+
+% Book Example:
+\bibitem{8}
+\newblock J. Smoller,
+\newblock \emph{Shock Waves and Reaction-Diffusion Equations},
+\newblock 2$^{nd}$ edition, Springer-Verlag, New York, 1994.
+
+% Preprint Article Example:
+\bibitem{9}
+\newblock A. Teplinsky,
+\newblock Herman's theory revisited,
+\newblock preprint, 2012, Arxiv: 0707.0078.
+
+% Thesis or Dissertation Example:
+\bibitem{10}
+\newblock K. Wei,
+\newblock \emph{Torsion Cycles and Set Theoretic Complete Intersection},
+\newblock Ph.D thesis, Washington University in St. Louis, 2006.
+
+\end{thebibliography}
+% ]
+% \end{multicols}
+\medskip
+
+
+
+\end{document}
